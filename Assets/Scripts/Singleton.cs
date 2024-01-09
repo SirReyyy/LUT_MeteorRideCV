@@ -5,8 +5,6 @@ using UnityEngine;
 public class Singleton : MonoBehaviour
 {
     private static Singleton instance;
-
-    /*
     public enum GameState
     {
         TitleState,
@@ -14,10 +12,18 @@ public class Singleton : MonoBehaviour
         ScoreState
     }
     [HideInInspector]
-    public GameState State = GameState.TitleState;
+    public GameState gameState = GameState.TitleState;
     [HideInInspector]
     public string player_rfid_serial_number = "";
-     */
+    [HideInInspector]
+    public int currentScore = 0;
+    [HideInInspector]
+    public int minimumScore, maximumScore = 3000;
+    [HideInInspector]
+    public bool tapEnabled = true, isLoggedIn = false;
+
+    [HideInInspector]
+    public float currentHealth = 100.0f;
 
 
     public static Singleton Instance {
@@ -25,7 +31,7 @@ public class Singleton : MonoBehaviour
     } //-- Singleton Instance end
 
     private void Awake() {
-        if (instance == null && instance != this) {
+        if (instance != null && instance != this) {
             Destroy(this.gameObject);
         } else {
             instance = this;
