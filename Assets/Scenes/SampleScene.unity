@@ -267,8 +267,9 @@ MonoBehaviour:
   _titlePanel: {fileID: 0}
   _gamePanel: {fileID: 1030654133}
   mechlifeSlider: {fileID: 1550616306}
-  biocreditSlider: {fileID: 274132327}
+  distanceSlider: {fileID: 274132327}
   reloadSlider: {fileID: 1721073950}
+  biocreditsText: {fileID: 1771678112}
   shotsRemText: {fileID: 759589593}
   _scorePanel: {fileID: 0}
   quadBg: {fileID: 728336528}
@@ -387,7 +388,7 @@ GameObject:
   - component: {fileID: 274132326}
   - component: {fileID: 274132327}
   m_Layer: 5
-  m_Name: Sld_Biocredit
+  m_Name: Sld_Distance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,7 +1018,7 @@ GameObject:
   - component: {fileID: 866070099}
   - component: {fileID: 866070098}
   m_Layer: 5
-  m_Name: Lbl_Mechlife
+  m_Name: Lbl_Asher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -100}
+  m_AnchoredPosition: {x: 150, y: -100}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866070098
@@ -1063,7 +1064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'mechlife:'
+  m_text: '        Asher:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb01a3de1f7f33143adc60b82c1a20e8, type: 2}
   m_sharedMaterial: {fileID: -6265023306188767131, guid: bb01a3de1f7f33143adc60b82c1a20e8, type: 2}
@@ -1437,7 +1438,7 @@ GameObject:
   - component: {fileID: 1550616305}
   - component: {fileID: 1550616306}
   m_Layer: 5
-  m_Name: Sld_Mechlife
+  m_Name: Sld_Asher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2400,6 +2401,18 @@ PrefabInstance:
     - target: {fileID: 5973034004659665947, guid: abb17cd9d2f9da34f8e14b21d1ac929f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139924455624914716, guid: abb17cd9d2f9da34f8e14b21d1ac929f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139924455624914716, guid: abb17cd9d2f9da34f8e14b21d1ac929f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139924455624914716, guid: abb17cd9d2f9da34f8e14b21d1ac929f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

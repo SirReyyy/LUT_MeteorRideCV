@@ -61,7 +61,8 @@ public class ScreenHitScript : MonoBehaviour
         if(GetComponent<Collider2D>() != Physics2D.OverlapPoint(mousePos)) {
             gameObj = Physics2D.OverlapPoint(mousePos).gameObject;
             
-            if(gameObj.name != "Asher") {
+            if(gameObj.name == "Asteroid(Clone)") {
+                _singletonManager.currentScore += 5;
                 Destroy(gameObj);
             }
         }

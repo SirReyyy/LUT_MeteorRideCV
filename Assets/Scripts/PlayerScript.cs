@@ -33,6 +33,7 @@ public class PlayerScript : MonoBehaviour
                 Destroy(other);
             }*/
 
+           StartCoroutine(HitEffect());
            _singletonManager.currentHealth = _singletonManager.currentHealth - 15.0f;
            Destroy(other.gameObject);
             
@@ -40,6 +41,29 @@ public class PlayerScript : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+    }
+
+    private IEnumerator HitEffect()
+    {
+        SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+        Color defaultColor = playerSprite.color;
+
+        playerSprite.color = new Color(1, 0, 0, 1);
+        yield return new WaitForSeconds(0.1f);
+
+        playerSprite.color = new Color(0, 0, 0, 1);
+        yield return new WaitForSeconds(0.1f);
+
+        playerSprite.color = new Color(1, 0, 0, 1);
+        yield return new WaitForSeconds(0.1f);
+
+        playerSprite.color = new Color(0, 0, 0, 1);
+        yield return new WaitForSeconds(0.1f);
+
+        playerSprite.color = new Color(1, 0, 0, 1);
+        yield return new WaitForSeconds(0.1f);
+
+        playerSprite.color = defaultColor;
     }
 
 } //-- class end

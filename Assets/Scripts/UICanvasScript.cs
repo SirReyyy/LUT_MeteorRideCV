@@ -16,8 +16,10 @@ public class UICanvasScript : MonoBehaviour
     public GameObject _titlePanel;
     public GameObject _gamePanel;
     public Slider mechlifeSlider;
-    public Slider biocreditSlider;
+    public Slider distanceSlider;
     public Slider reloadSlider;
+
+    public TMP_Text biocreditsText;
     public TMP_Text shotsRemText;
     public GameObject _scorePanel;
 
@@ -48,6 +50,7 @@ public class UICanvasScript : MonoBehaviour
 
         mechlifeSlider.value = _singletonManager.currentHealth;
         shotsRemText.text = _singletonManager.shotsRemaining.ToString();
+        biocreditsText.text = _singletonManager.currentScore.ToString();
 
         /*
         if (_singletonManager.gameState == Singleton.GameState.TitleState) {
@@ -87,8 +90,8 @@ public class UICanvasScript : MonoBehaviour
 
     void FixedUpdate() {
         // if (_singletonManager.gameState == Singleton.GameState.PlayState) {
-            
-            biocreditSlider.value += 1;
+
+            distanceSlider.value += 1;
         // }
     } //-- FixedUpdate end
 
