@@ -21,12 +21,13 @@ public class AsteroidScript : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         asteroidRotSpeed = Random.Range(0, 2) * 2 - 1;
 
+        // asteroid scale
         float scale = Random.Range(0.8f, 1.4f);
         transform.localScale = new Vector3(scale, scale, scale);
     } //-- start end
 
     void Update() {
-        
+        // AsteroidHitMouse();
     } //-- Update end
 
 
@@ -35,7 +36,7 @@ public class AsteroidScript : MonoBehaviour
 
         var step = asteroidSpeed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, playerPosition.position, step);
-    }
+    } //-- FixedUpdate end
 } //-- class end
 
 

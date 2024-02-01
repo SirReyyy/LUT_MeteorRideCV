@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class UICanvasScript : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class UICanvasScript : MonoBehaviour
     public GameObject _gamePanel;
     public Slider mechlifeSlider;
     public Slider biocreditSlider;
+    public Slider reloadSlider;
+    public TMP_Text shotsRemText;
     public GameObject _scorePanel;
 
     [Header("Quad Background")]
@@ -44,6 +47,7 @@ public class UICanvasScript : MonoBehaviour
         bgMaterial.SetTextureOffset("_MainTex", offset);
 
         mechlifeSlider.value = _singletonManager.currentHealth;
+        shotsRemText.text = _singletonManager.shotsRemaining.ToString();
 
         /*
         if (_singletonManager.gameState == Singleton.GameState.TitleState) {
@@ -109,7 +113,6 @@ public class UICanvasScript : MonoBehaviour
                 break;
         }
     } //-- PanelState end
-
 } //-- class end
 
 
@@ -117,4 +120,3 @@ public class UICanvasScript : MonoBehaviour
 Project: 
 Made by: 
 */
-

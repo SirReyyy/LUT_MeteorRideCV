@@ -10,7 +10,7 @@ public class AsteroidSpawnerScript : MonoBehaviour
 
     public float maxTime = 5.0f;
     private float timer = 0.0f;
-    private float bounds_X = 6.5f, bounds_Y = 10.0f;
+    private float bounds_X = 8.5f, bounds_Y = 10.0f;
 
 
     void Start() {

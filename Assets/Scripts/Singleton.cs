@@ -24,6 +24,8 @@ public class Singleton : MonoBehaviour
 
     [HideInInspector]
     public float currentHealth = 100.0f;
+    [HideInInspector]
+    public int shotsRemaining = 3;
 
 
     public static Singleton Instance {
