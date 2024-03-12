@@ -10,6 +10,7 @@ public class AsteroidScript : MonoBehaviour
     private Rigidbody2D rbody;
     private Transform playerPosition;
     public float asteroidSpeed = 1.0f;
+    public float minScale, maxScale;
     float asteroidRotSpeed;
 
 
@@ -22,7 +23,7 @@ public class AsteroidScript : MonoBehaviour
         asteroidRotSpeed = Random.Range(0, 2) * 2 - 1;
 
         // asteroid scale
-        float scale = Random.Range(0.8f, 1.4f);
+        float scale = Random.Range(minScale, maxScale);
         transform.localScale = new Vector3(scale, scale, scale);
     } //-- start end
 

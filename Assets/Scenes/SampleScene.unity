@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d75fcba44611d445a971b6d00267f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 1544463538232630479, guid: 76fcfbbd9f4a3824c874a758639cb861, type: 3}
+  asteroidPrefab: {fileID: 1133172098927772197, guid: 035858b322914f5488d8832a559b1d93, type: 3}
   asteroidHolder: {fileID: 402902794}
   maxTime: 5
 --- !u!4 &1789980795

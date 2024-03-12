@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScreenHitScript : MonoBehaviour
@@ -62,6 +63,11 @@ public class ScreenHitScript : MonoBehaviour
             gameObj = Physics2D.OverlapPoint(mousePos).gameObject;
             
             if(gameObj.name == "Asteroid(Clone)") {
+                _singletonManager.currentScore += 5;
+                Destroy(gameObj);
+            }
+
+            if(gameObj.tag == "Asteroid") {
                 _singletonManager.currentScore += 5;
                 Destroy(gameObj);
             }
