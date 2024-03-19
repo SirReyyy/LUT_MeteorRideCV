@@ -11,6 +11,7 @@ public class AsteroidScript : MonoBehaviour
     private Transform playerPosition;
     public float asteroidSpeed = 1.0f;
     public float minScale, maxScale;
+    public bool isRotating = false;
     float asteroidRotSpeed;
 
 
@@ -33,7 +34,9 @@ public class AsteroidScript : MonoBehaviour
 
 
     void FixedUpdate() {
-        rbody.rotation += asteroidRotSpeed;
+        if(isRotating) {
+            rbody.rotation += asteroidRotSpeed;
+        }
 
         var step = asteroidSpeed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, playerPosition.position, step);
